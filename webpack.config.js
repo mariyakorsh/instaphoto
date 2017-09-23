@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var jquery = require('jquery');
 
 module.exports = {
     entry: "./src/main.js",
@@ -22,6 +23,13 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+            '$': 'jquery',
+            'jQuery': 'jquery'
+        })
+    ],
+    resolve: {
+        modules: ["node_modules"]
+    }
 }
