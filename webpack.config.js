@@ -9,17 +9,21 @@ module.exports = {
     	filename: "bundle.js"
     },
     module: {
-        loaders: [
-           {
-                test: /\.(jsx|js)$/,
-                loader: ['react-hot-loader','babel-loader'],
+        rules: [{
+                test: /\.(css|less)$/,
                 exclude: [/node_modules/, /public/],
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader!autoprefixer-loader',
-                exclude: [/node_modules/, /public/]
-            }
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"},
+                    {loader: "autoprefixer-loader"},
+                    {loader: "less-loader"}
+                    ]
+                 },
+                {
+                    test: /\.(jsx|js)$/,
+                    loader: ['react-hot-loader', 'babel-loader'],
+                    exclude: [/node_modules/, /public/],
+                }
         ]
     },
     plugins: [
