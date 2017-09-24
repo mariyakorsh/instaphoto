@@ -15,7 +15,7 @@ export default class App extends React.Component {
         const userID = 1338420743;
         const clientID = '544aadf7e12a4e338b4639022de74cbb';
         const token = '1338420743.544aadf.87030da2e26a41e9b7ed7e6e65d40d4d';
-        const count = 4;
+        const count = 20;
             $.ajax({
                 url: 'https://api.instagram.com/v1/users/' + userID + '/media/recent',
                 dataType: 'jsonp',
