@@ -1,0 +1,56 @@
+@import "../../style/pallete.less";
+@size-icon: 30px;
+
+.photo{
+  width: 550px;
+  height: 550px;
+}
+.info{
+  display: inline-block;
+  width: 450px;
+  padding: 20px;
+  text-align: left;
+  font-size: 16px;
+  position: relative;
+}
+.photoInfo{
+  width: 100%;
+  margin: 50px auto;
+  background-color: @fone;
+  display: inline-flex;
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,.03);
+  border: 1px solid #e6e6e6;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 40px 20px 40px 20px;
+  color: #262626;
+}
+hr{
+  border: 0;
+  height: 1px;
+  background: #e6e6e6;
+  background-image: -webkit-linear-gradient(left, #fff, #ccc, #fff);
+}
+.like{
+  display: inline-block;
+  margin-bottom: 20px;
+
+  img{
+    position: relative;
+    width: @size-icon;
+    height: @size-icon;
+    top: 8px;
+  }
+  span{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+.date{
+  color: #999;
+}

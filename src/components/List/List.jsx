@@ -1,5 +1,7 @@
 import * as React from "react";
-import PhotoInfo from "./PhotoInfo.jsx";
+
+import PhotoInfo from "../PhotoInfo/PhotoInfo.jsx";
+import "./List.less"
 
 
 export default class List extends React.Component{
@@ -13,7 +15,7 @@ export default class List extends React.Component{
     render() {
         if(this.state.array) {
             return (
-                <div>
+                <div className="list">
                     {
                         this.state.array.map(function (item, index, arr) {
                             return <PhotoInfo
