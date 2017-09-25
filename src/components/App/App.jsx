@@ -23,9 +23,10 @@ export default class App extends React.Component {
             url: 'https://api.instagram.com/v1/users/' + userID + '/media/recent',
             dataType: 'jsonp',
             type: 'GET',
-            data: {access_token: token, count: count},
+            data: {access_token: token},
             success: (result) => {
                 this.setState({data: result});
+                console.log(result);
                 button.disabled = false;
             },
             error: function (result) {

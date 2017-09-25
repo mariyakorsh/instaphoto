@@ -21,6 +21,9 @@ export default class List extends React.Component{
                             return <PhotoInfo
                                 key={index}
                                 photo={item.images.standard_resolution}
+                                username={item.user.username}
+                                profilePicture={item.user.profile_picture}
+                                video={item.videos ?item.videos.low_bandwidth : null}
                                 description={item.caption ? item.caption.text: ""}
                                 likes={item.likes.count}
                                 createdTime={item.created_time}
