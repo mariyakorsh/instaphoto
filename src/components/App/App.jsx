@@ -2,6 +2,7 @@ import $ from 'jquery';
 import * as React from "react";
 
 import List from "../List/List.jsx";
+import Header from "../Header/Header.jsx";
 import "./App.less"
 
 export default class App extends React.Component {
@@ -40,9 +41,10 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="header">
-                    <button className="button" onClick={this.AddPhotos}>Download</button>
-                </div>
+                <Header
+                    addPhoto={this.AddPhotos}
+                    profile={this.state.data}
+                    />
                 <List data={this.state.data}/>
             </div>
         );
