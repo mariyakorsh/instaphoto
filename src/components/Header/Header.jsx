@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import "./Header.less";
+import Search from "../Search/Search.jsx";
+import User from '../User/User.jsx';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -13,12 +15,10 @@ export default class Header extends React.Component {
     render() {
             return (
                 <div className="header">
+                    <Search profile={this.state.profile}/>
                     <button className="button" onClick={this.props.addPhoto}>Download</button>
-                    <div className='profile'>
-                        <div className="userInfo">
-                            <img className='profilePicture' style={{display: this.state.display}} src={this.state.profile.profile_picture}/>
-                            <span>{this.state.profile.username}</span>
-                        </div>
+                    <div className='headerProfile'>
+                        <User username={this.state.profile.username} picture={this.state.profile.profile_picture}/>
                     </div>
                 </div>
             );

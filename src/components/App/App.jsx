@@ -36,6 +36,23 @@ export default class App extends React.Component {
 
             }
         });
+        // const promise = new Promise((success, error)=> {
+        //     const request = new XMLHttpRequest();
+        //     request.open('GET', 'https://api.instagram.com/v1/users/' + userID + '/media/recent?access_token='+ token);
+        //     request.setRequestHeader("Access-Control-Allow-Origin", '*');
+        //     request.addEventListener('load', () => {
+        //         console.log(request.responseText);
+        //         success(request.responseText);
+        //     });
+        //     request.addEventListener('error', () => {
+        //         console.log('Error');
+        //         error(new Error('Error'));
+        //     });
+        //     request.send();
+        // });
+        // promise.then((result) => {
+        //     this.setState({data:result})
+        // });
     }
 
     render() {

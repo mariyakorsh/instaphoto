@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "./PhotoInfo.less";
+import User from '../User/User.jsx';
 
 
 export default class PhotoInfo extends React.Component {
@@ -21,10 +22,7 @@ export default class PhotoInfo extends React.Component {
             <div className="photoInfo">
                 {media}
                 <div className="info">
-                    <div className="userInfo">
-                        <img className="profilePicture" src={this.props.profilePicture}/>
-                        <span>{this.props.username}</span>
-                    </div>
+                    <User username={this.props.username} picture={this.props.profilePicture}/>
                     <hr/>
                     <div className="description"><span>{this.props.username}</span> {this.props.description}</div>
                     <div className="footer">
